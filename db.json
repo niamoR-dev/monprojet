@@ -1,0 +1,12 @@
+{
+  "cours": [
+    {
+      "name": "Cours 1",
+      "nbEtudiants": 10
+    },
+    {
+      "name": "Cours 2",
+      "nbEtudiants": 6
+    }
+  ]
+}
