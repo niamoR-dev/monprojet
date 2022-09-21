@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <button *ngIf="promptEvent" (click)="onInstall()">Install</button>
+
+    <ion-title>Header de la page</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot = "end">
+      <ion-button (click)="openMenu($event)">
+        <ion-icon slot="icon-only"
+        ios="ellipsis-horizontal"
+        md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <strong>Le contenu de la page</strong>
+  </div>
+  <button (click) = "openAlert()">Ouvrir l'alerte</button>
+</ion-content>
+
+

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>courses</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2 class="ion-margin">Liste de courses</h2>
+    <ion-list inset ="true">
+      <ion-item *ngFor="let elt of cours">
+        <ion-label>
+          <h4>{{elt.nom}}</h4>
+          <p>nb étudiants : {{elt.nbetud}}</p>
+          <p> <a routerLink="/home"></a>Vers home</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-content>
+<h2 class="ion-margin">Liste de courses</h2>
+  <ion-list inset ="true">
+    <ion-item *ngFor="let elt of cours">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{elt.nom}}</ion-card-title>
+          <ion-card-subtitle>Sous-titre</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Nb étudiants : {{elt.nbetud}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  <a routerLink="/home">HOME</a>
+</ion-content>
