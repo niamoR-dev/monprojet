@@ -1,25 +1,27 @@
 import { Injectable } from '@angular/core';
 import {Cours} from '../models/cours';
 import {HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursService {
   uri = 'http://localhost:3000/cours';
-  cours = new Array<Cours>();
 
   constructor(private http: HttpClient) {
   }
 
-  getCours(): void {
-    this.http.get<Cours[]>(this.uri).subscribe(
-      data => data.forEach(c => this.cours.push(c))
-    );
+  findAll(): Observable<Cours[]>{
+    return this.http.get<Cours[]>(this.uri);
   }
 
   addCours(c: Cours) {
     c.id = 0;
     this.http.post<Cours>(`${this.uri}`, c).subscribe();
+  }
+
+  deleteCours(cours: Cours): Observable<Cours>{
+    return this.http.delete<Cours>(this.uri + '/' + cours.id);
   }
 }

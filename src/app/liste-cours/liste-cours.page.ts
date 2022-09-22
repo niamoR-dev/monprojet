@@ -10,13 +10,23 @@ import {CoursService} from '../services/cours.service';
 export class ListeCoursPage implements OnInit {
 
   cours!: Cours[];
+  singleCours!: Cours;
 
   constructor(private service: CoursService) {
   }
 
   ngOnInit() {
-    this.service.getCours();
-    this.cours = this.service.cours;
+    this.getCours();
   }
 
+  deleteCours(cours: Cours) {
+    this.service.deleteCours(cours).subscribe(() => {
+      console.log('suppression du cours ', cours.id);
+      this.ngOnInit();
+    });
+  }
+
+  getCours() {
+    this.service.findAll().subscribe(list => this.cours = list);
+  }
 }
