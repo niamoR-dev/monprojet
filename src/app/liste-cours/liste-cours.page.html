@@ -10,7 +10,7 @@
       <ion-card>
         <ion-card-header>
           <ion-card-title>{{elt.name}}</ion-card-title>
-          <ion-card-subtitle>Sous-titre</ion-card-subtitle>
+          <ion-card-subtitle> Tenu par le professeur {{elt.professeur}} </ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
           Nb étudiants : {{elt.nbEtudiants}}
@@ -18,5 +18,10 @@
       </ion-card>
     </ion-item>
   </ion-list>
-  <a routerLink="/home">HOME</a>
+  <ion-button>
+    <a routerLink="/home">HOME</a>
+  </ion-button>
+  <ion-button>
+    <a routerLink="/add-cours">Ajouter un cours</a>
+  </ion-button>
 </ion-content>

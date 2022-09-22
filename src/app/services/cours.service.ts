@@ -19,6 +19,7 @@ export class CoursService {
   }
 
   addCours(c: Cours) {
-    this.http.put<Cours>(`${this.uri}`, c).subscribe();
+    c.id = 0;
+    this.http.post<Cours>(`${this.uri}`, c).subscribe();
   }
 }

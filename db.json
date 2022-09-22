@@ -1,12 +1,16 @@
 {
   "cours": [
     {
+      "id": 1,
       "name": "Cours 1",
-      "nbEtudiants": 10
+      "nbEtudiants": 10,
+      "professeur": "Tournesol"
     },
     {
+      "id": 2,
       "name": "Cours 2",
-      "nbEtudiants": 6
+      "nbEtudiants": 6,
+      "professeur": "Xavier"
     }
   ]
 }

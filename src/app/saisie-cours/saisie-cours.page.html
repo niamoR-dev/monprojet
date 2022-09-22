@@ -5,10 +5,36 @@
 </ion-header>
 
 <ion-content>
-<form>
-  <div class="form-add-course">
-    <label for = "nameCourse">Nom du cours : </label>
-    <input type = "text" id = "nameCourse">
-  </div>
-</form>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="floating" color="primary">Nom du cours</ion-label>
+        <ion-input type="text" class="form-control" formControlName="name"></ion-input>
+      </ion-item>
+    </div>
+    <div *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)" class="alert alert-danger">
+      Veuillez indiquer l'intitulé du cours
+    </div>
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="floating" color="primary">Nombre d'étudiants</ion-label>
+        <ion-input type="number" class="form-control" formControlName="nbEtudiants"></ion-input>
+      </ion-item>
+    </div>
+    <div *ngIf="form.controls['nbEtudiants'].invalid && (form.controls['nbEtudiants'].dirty || form.controls['nbEtudiants'].touched)" class="alert alert-danger">
+      Veuillez indiquer le nombre d'élèves
+    </div>
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="floating" color="primary">Nom du professeur</ion-label>
+        <ion-input type="text" class="form-control" formControlName="professeur"></ion-input>
+      </ion-item>
+    </div>
+    <div *ngIf="form.controls['professeur'].invalid && (form.controls['professeur'].dirty || form.controls['professeur'].touched)" class="alert alert-danger">
+      Veuillez indiquer le nom du professeur
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" [disabled]="form.pristine || form.invalid">Ajouter le cours</button>
+    </div>
+  </form>
 </ion-content>
