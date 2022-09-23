@@ -19,7 +19,6 @@ const routes: Routes = [
     path: 'cours',
     loadChildren: () => import('./liste-cours/liste-cours.module').then(m => m.ListeCoursPageModule)
   },
-
   {
     path: 'mapage',
     loadChildren: () => import('./mapage/mapage.module').then(m => m.MapagePageModule)
@@ -40,6 +39,15 @@ const routes: Routes = [
     path: 'rechercher-cours',
     loadChildren: () => import('./rechercher-cours/rechercher-cours.module').then(m => m.RechercherCoursPageModule)
   },
+  {
+    path: 'add-professeur',
+    loadChildren: () => import('./saisie-professeur/saisie-professeur.module').then( m => m.SaisieProfesseurPageModule)
+  },
+  {
+    path: 'professeurs',
+    loadChildren: () => import('./liste-professeurs/liste-professeurs.module').then( m => m.ListeProfesseursPageModule)
+  },
+
 ];
 
 @NgModule({

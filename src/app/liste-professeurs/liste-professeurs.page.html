@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste des professeurs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list inset ="true">
+    <ion-item *ngFor="let elt of professeurs">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Professeur {{elt.nom}} {{elt.prenom}}</ion-card-title>
+          <ion-card-subtitle> {{elt.age}} ans de métier </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <!-- TODO: Prévoir la photo du professeur ici -->
+        </ion-card-content>
+        <button type="button" id="delete" class="btn btn-danger" (click)="deleteProfesseur(elt)">Supprimer</button>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  <ion-button>
+    <a routerLink="/home">HOME</a>
+  </ion-button>
+  <ion-button>
+    <a routerLink="/add-professeur">Ajouter un Professeur</a>
+  </ion-button>
+</ion-content>
