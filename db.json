@@ -5,6 +5,21 @@
       "nbEtudiants": 12,
       "professeur": "Michel",
       "id": 1
+    },
+    {
+      "name": "Maths",
+      "nbEtudiants": 9,
+      "professeur": "Michel",
+      "id": 2
+    }
+  ],
+  "professeurs": [
+    {
+      "nom": "Michel",
+      "prenom": "Professeur",
+      "urlPhoto": "photo",
+      "age": "8",
+      "id": 2
     }
   ]
 }

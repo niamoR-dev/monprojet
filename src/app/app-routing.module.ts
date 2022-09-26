@@ -24,10 +24,6 @@ const routes: Routes = [
     loadChildren: () => import('./mapage/mapage.module').then(m => m.MapagePageModule)
   },
   {
-    path: 'saisie-cours',
-    loadChildren: () => import('./saisie-cours/saisie-cours.module').then(m => m.SaisieCoursPageModule)
-  },
-  {
     path: 'liste-cours',
     loadChildren: () => import('./liste-cours/liste-cours.module').then(m => m.ListeCoursPageModule)
   },

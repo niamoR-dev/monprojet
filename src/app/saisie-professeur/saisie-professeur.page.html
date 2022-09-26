@@ -9,7 +9,7 @@
     <div class="form-group">
       <ion-item>
         <ion-label position="floating" color="primary">Nom du professeur</ion-label>
-        <ion-input type="text" class="form-control" formControlName="name"></ion-input>
+        <ion-input type="text" class="form-control" formControlName="nom"></ion-input>
       </ion-item>
     </div>
     <div *ngIf="form.controls['nom'].invalid && (form.controls['nom'].dirty || form.controls['nom'].touched)" class="alert alert-danger">
@@ -19,7 +19,7 @@
     <div class="form-group">
       <ion-item>
         <ion-label position="floating" color="primary">Prénom du professeur</ion-label>
-        <ion-input type="text" class="form-control" formControlName="professeur"></ion-input>
+        <ion-input type="text" class="form-control" formControlName="prenom"></ion-input>
       </ion-item>
     </div>
     <div *ngIf="form.controls['prenom'].invalid && (form.controls['prenom'].dirty || form.controls['prenom'].touched)" class="alert alert-danger">
@@ -29,20 +29,20 @@
     <div class="form-group">
       <ion-item>
         <ion-label position="floating" color="primary">Photo</ion-label>
-        <ion-input type="text" class="form-control" formControlName="professeur"></ion-input>
+        <ion-input type="text" class="form-control" formControlName="urlPhoto"></ion-input>
       </ion-item>
     </div>
-    <div *ngIf="form.controls['prenom'].invalid && (form.controls['prenom'].dirty || form.controls['prenom'].touched)" class="alert alert-danger">
+    <div *ngIf="form.controls['urlPhoto'].invalid && (form.controls['urlPhoto'].dirty || form.controls['urlPhoto'].touched)" class="alert alert-danger">
       Photo
     </div>
 
     <div class="form-group">
       <ion-item>
         <ion-label position="floating" color="primary">Années d'expérience</ion-label>
-        <ion-input type="text" class="form-control" formControlName="professeur"></ion-input>
+        <ion-input type="text" class="form-control" formControlName="age"></ion-input>
       </ion-item>
     </div>
-    <div *ngIf="form.controls['prenom'].invalid && (form.controls['prenom'].dirty || form.controls['prenom'].touched)" class="alert alert-danger">
+    <div *ngIf="form.controls['age'].invalid && (form.controls['age'].dirty || form.controls['age'].touched)" class="alert alert-danger">
       Années d'expérience
     </div>
 
